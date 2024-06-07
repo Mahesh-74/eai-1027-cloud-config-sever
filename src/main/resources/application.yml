@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eai-1027-cloud-config-sever
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Mahesh-74/eai-1028-cloud-config-repo
+
+server:
+  port: 9198
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
